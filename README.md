@@ -14,7 +14,3 @@ Trainable params: 34,764,289
 Non-trainable params: 1,472
 salvamos el modelo
 creamos una función que usando el modelo creado devuelve si la imagen es perro o gato
-
-
-
-
