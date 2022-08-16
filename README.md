@@ -1,4 +1,11 @@
 # REDES-NEURONALES-EN-CLASE
+
+In this project we train a neural network to classify if an image is a dog or a cat.
+
+Before training the model we reshape the images (taken from https://www.microsoft.com/en-us/download/details.aspx?id=54765) so the size is 200*200. This is done in the notebook DogCatResize.ipynb.
+
+Then, we train the neural network using Tensorflow in the notebook Cat_Dog_Model.ipynb.
+
 Para este trabajo trajimos las imagenes de perros y gatos en archivos zip separados.
 Creamos una carpeta Pets y allí pusimos la carpeta perro y la carpeta gatos.
 Rediseñamos el tamaño de las imagenes a un punto que aún perdiendo calidad se pudiera diferenciar si es un perro o un gato
