@@ -32,13 +32,9 @@ def load_img(filename):
     return img_resized
 
 
-# load the model from disk
-filename = './models/image-classifire-cat-and-dog_Model.pickle'
-loaded_model = pickle.load(open(filename, 'rb'))
-
 from keras.preprocessing import image
-filename = './models/image-classifire-cat-and-dog_Model.pickle'
-img = image.load_img("cute_dog.jpg",target_size=(200,200))
+filename = './models/cat-dog_Model.pickle'
+img = image.load_img("cute_cat.jpg",target_size=(200,200))
 img = np.asarray(img)
 plt.imshow(img)
 img = np.expand_dims(img, axis=0)
