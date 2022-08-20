@@ -22,7 +22,9 @@ from keras.utils import load_img
 from keras.utils import img_to_array
 from keras.utils import get_file
 from keras.utils import image_dataset_from_directory
-import pickle
+from tensorflow.keras.models import load_model
+from keras.preprocessing import image
+from keras.models import load_model
 
 def load_img(filename):
     img = cv2.imread(filename)
@@ -33,17 +35,16 @@ def load_img(filename):
     return img_resized
 
 
-from keras.preprocessing import image
-
-filename = './cat-dog_Model.pkl'
-img = image.load_img("cute_cat.jpg",target_size=(200,200))
+filename = './cat-dog_Model.h5'
+img = tf.keras.utils.load_img("cute_cat.jpg",target_size=(200,200))
 img = np.asarray(img)
 plt.imshow(img)
 img = np.expand_dims(img, axis=0)
-from keras.models import load_model
-saved_model = loaded_model = pickle.load(open(filename, 'rb'))
-output = saved_model.predict(img)
+saved_model= load_model(filename)
+output =saved_model.predict(img)
+
 if output[0][0] > output[0][1]:
     print("cat")
 else:
     print('dog')
+    
