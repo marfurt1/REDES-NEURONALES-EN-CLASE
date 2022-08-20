@@ -35,7 +35,7 @@ def load_img(filename):
 
 from keras.preprocessing import image
 
-filename = './models/image-classifire-cat-and-dog_Model.pickle'
+filename = './cat-dog_Model.pkl'
 img = image.load_img("cute_cat.jpg",target_size=(200,200))
 img = np.asarray(img)
 plt.imshow(img)
