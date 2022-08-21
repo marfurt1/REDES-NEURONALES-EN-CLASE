@@ -36,7 +36,7 @@ def load_img(filename):
 
 
 filename = './cat-dog_Model.h5'
-img = tf.keras.utils.load_img("cute_cat.jpg",target_size=(200,200))
+img = tf.keras.utils.load_img("10.jpg",target_size=(200,200))
 img = np.asarray(img)
 plt.imshow(img)
 img = np.expand_dims(img, axis=0)
